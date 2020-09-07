@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/login" method="POST">
+            <h1>Login Form</h1>
+            <label>userName:</label>
+            <% if(errors.username.length){ %>
+                <small><%= errors.username %></small>
+                <% } %>
+            <input type="text" name="username" placeholder="Enter your admin userName" required>
+            
+            <label>password:</label>
+            <% if(errors.password.length){ %>
+                <small><%= errors.password %></small>
+            <% } %>
+            <input type="password" name="password" placeholder="Enter your acc. password" required>
+            <button type="submit">Login</button>
+        </form>
+
+    </div>
+</body>
+</html>
